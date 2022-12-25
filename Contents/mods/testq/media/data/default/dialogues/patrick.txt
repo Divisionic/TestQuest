@@ -41,5 +41,5 @@ fade_in
 		#exit
 	#m *Player answers that he hasn't found them yet*
 	#exit
-# Thomas|DiviHappy.png|"Glad to see you alive, my friend!"
+#m Patrick|DiviHappy.png|"Glad to see you alive, my friend!"
 #exit
