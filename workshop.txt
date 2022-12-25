@@ -1,0 +1,8 @@
+version=1
+id=2905851734
+title=TestQ v0.1
+description=Example from quide for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2793385743]SSR: Quest System[/url] mod. Though this one is mine.
+description=
+description=This mod is public for simplicities sake.
+tags=Build 41
+visibility=public

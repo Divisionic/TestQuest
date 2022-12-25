@@ -1,0 +1,5 @@
+#is_flag th_intro,false
+    #npc_create Patrick|patrick_normal|sit|698,2902,0|W
+    #exit
+#npc_create Patrick|patrick_normal|idle|698,2902,0|E
+#exit

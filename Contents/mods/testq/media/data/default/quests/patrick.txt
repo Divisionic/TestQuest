@@ -1,0 +1,18 @@
+#quest th_q1
+    #task t1|unlocked|hidden
+        #set FindItem|Base.Pills,2
+    #task t2
+        #set GotoLocation|680,2890,0|building
+        #action UnlockTask|th_q1|t3
+    #task t3
+        #set Secure|680,2890,0|building
+        #action Unlocktask|th_q1|t4
+    #task t4
+        #set LootContainer|militarycrate|680,2894,0|Base.Pills,false|Base.Pills,false
+    #task t5|unlocked|hidden
+        #set TaskCondition|th_q1|t1/t2,t3,t4
+        #action UnlockTask|th_q1|t6
+    #task t6
+        #set RaiseFlag|th_q1_completed
+        #action SelectReward|Base.TinnedBeans,2,common|Base.TinnedSoup,2,common|TinOpener,1,common,true
+        #action CompleteQuest|th_q1

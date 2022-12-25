@@ -1,0 +1,8 @@
+*th_q1_t2
+#name Arrive at the Tent
+*th_q1_t3
+#name Kill Zombies
+*th_q1_t4
+#name Look for Painkillers in the Tent
+*th_q1_t6
+#name Give Patrick his Pills

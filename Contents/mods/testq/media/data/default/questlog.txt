@@ -1,0 +1,3 @@
+#entry This Soldier near the Table
+#line th_intro|Near the seemingly important Tent, I had the unluck of finding this german Soldier. Saved him though, seemed nice.
+#line th_q1_cleared|His leg was in severe pain, so I gave him some painkillers from a tent with a dish, just to help an old man.

@@ -1,0 +1,3 @@
+*th_q1
+#name Heading to the Tent
+#desc Patrick complains of severe pain in his leg. Asked me to bring him a few painkillers. He told me to search the Tent with the Dish.

@@ -1,0 +1,26 @@
+#name Patrick|Patrick Dolar
+#set_stat Patrick|reputation|10
+
+#desc Name: Patrick
+#desc_append Age: 70
+
+#is_alive Patrick,true
+	#desc_append Status: Alive
+	#jump after_status
+#desc_append Status: Deceased
+
+*after_status
+#desc_append POD Soldier, once a leader. German, too.
+#is_flag Patrick_secret,true
+	#desc_append Whistling a tune of german hymn at night.
+#is_cleared Patrick,10,gt
+	#desc_append I guess I became his errand ${female,girl,boy}.
+
+#is_stat Patrick,reputation,60,gt
+	#desc_append I think our relationship is fine.
+	#exit
+#is_stat Patrick,reputation,30,gt
+	#desc_append He’s starting to trust me.
+	#exit
+#desc_append He’s way too cautious of me.
+#exit
