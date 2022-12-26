@@ -16,7 +16,7 @@
 #fade_out black
 #set_flag th_intro,true
 #npc_update Patrick
-fade_in
+#fade_in
 #reveal Patrick
 #exit
 
