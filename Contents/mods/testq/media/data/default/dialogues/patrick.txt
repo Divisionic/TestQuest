@@ -1,4 +1,4 @@
-#is_flag th_intro,true
+#is_flag pa_intro,true
 	#jump loop
 	
 *intro
@@ -14,30 +14,30 @@
 *intro_help
 #m You decide to help the old man to dig his way out.
 #fade_out black
-#set_flag th_intro,true
+#set_flag pa_intro,true
 #npc_update Patrick
 #fade_in
 #reveal Patrick
 #exit
 
 *loop
-#is_quest th_q1|locked
+#is_quest pa_q1|locked
 	#m *Patrick asks for help*
-	#quest_unlock th_q1
+	#quest_unlock pa_q1
 	#m *Player checks his pockets*
 	#has_item Base.Pills,2
-		#jump th_q1_found
+		#jump pa_q1_found
 	#m *But finds nothing and decides to look for it in the Tent*
-	#task_unlock th_q1|t2
+	#task_unlock pa_q1|t2
 	#exit
-#is_quest th_q1|unlocked,uncompleted
+#is_quest pa_q1|unlocked,uncompleted
 	#m *Patrick asked if we found the pills*
 	#has_item Base.Pills,2
-		*th_q1_found
+		*pa_q1_found
 		#remove_item Base.Pills,2
 		#m *Player gives Patrick his pills*
 		#m *Patrick is very thankful!*
-		#set_flag th_q1_completed,true
+		#set_flag pa_q1_completed,true
 		#exit
 	#m *Player answers that he hasn't found them yet*
 	#exit
