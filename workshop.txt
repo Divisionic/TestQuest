@@ -5,4 +5,4 @@ description=Example from quide for [url=https://steamcommunity.com/sharedfiles/f
 description=
 description=This mod is public for simplicities sake.
 tags=Build 41
-visibility=public
+visibility=friendsOnly
