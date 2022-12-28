@@ -11,13 +11,17 @@
 #m You try to stay as calm as possible, and act like you don't notice this strange figure at all.
 #m Old Man|Thomas.png|"What'd I even think..."
 *intro_help
-#m "Y-Yes, I can...?"
-#m Old Man|Thomas.png|"Well, fuck me sideways..."
+#m "Yes, I can...?"
+#m Old Man|Thomas.png|"Holy shit..."
 #fade_out black
 #set_flag pa_intro,true
 #npc_update Patrick
 #fade_in
 #reveal Patrick
+#m Old Man|Thomas.png|"I- Are you- Wha- D- You're human?"
+#choice
+	sarcasm|Well, I feel human enough, not sure about you though.
+	honest|Yeah, I'm human.
 #exit
 
 *loop
