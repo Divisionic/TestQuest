@@ -1,4 +1,4 @@
-#name Patrick|Patrick Dolar
+#name Patrick|Patrick Garvis
 #set_stat Patrick|reputation|10
 
 #desc Name: Patrick
