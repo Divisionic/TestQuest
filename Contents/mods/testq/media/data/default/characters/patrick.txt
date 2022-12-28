@@ -10,7 +10,7 @@
 #desc_append Status: Deceased
 
 *after_status
-#desc_append An old Soldier, still waiting for his orders. Unsure how he survived that long out here, I should probably keep my distance to him.
+#desc_append An old Soldier, still waiting for his orders. Unsure how he survived that long out here, I should probably keep my distance, easy with his smell anyways.
 #is_flag Patrick_secret,true
 	#desc_append Whistling a tune of german hymn at night.
 #is_cleared Patrick,10,gt
