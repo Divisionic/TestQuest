@@ -1,5 +1,7 @@
 #is_flag pa_intro,false
-    #npc_create Patrick|patrick_normal|sit|698,2902,0|W
+    #npc_create Patrick|patrick_normal|sit|698,2902,0|N
     #exit
-#npc_create Patrick|patrick_normal|idle|698,2902,0|W
-#exit
+#is_flag pa_q1_completed,true
+    #npc_create Patrick|patrick_normal|sit|698,2902,0|N
+    #exit
+#npc_create Patrick|patrick_normal|idle|698,2902,0|E
