@@ -20,8 +20,14 @@
 #reveal Patrick
 #m Old Man|Thomas.png|"I- Are you- Wha- D- You're human?"
 #choice
-	sarcasm|Well, I feel human enough, not sure about you though.
-	honest|Yeah, I'm human.
+	sarcasm|"Well, I feel human enough, not sure about you though."
+	honest|"Yeah, I'm human...?"
+*sarcasm
+#m Old Man|Thomas.png|The old man suddenly laughs up, his voice raspy and old, though somewhat happy, "Hah! Hehe, I may not be beautiful, but I'm surely Human... Or, I believe that too, I think."
+	#jump 
+*honest 
+#m Old Man|Thomas.png|The old man chuckles, his voice raspy and old, though somewhat happy, "Hehe... Apologies, I'm just... I'd say amazed, to say the least. I haven't... It's been too long since I saw someone."
+	#jump 
 #exit
 
 *loop
