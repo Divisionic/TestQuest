@@ -2,16 +2,17 @@
 	#jump loop
 	
 *intro
-#m As you approach the pale elderly figure, you start to see it's details. It's an old man, sitting in his dirty combat uniform on the floor with a stench comparable to rotten... Garlic? Onions? Disgusting to say the least. You're surprised that the undead don't mind him; though He is surprised YOU mind him.
-#m Patrick|Thomas.png|"Oh? Can you... See me?"
+#m As you approach the pale elderly figure, you start to see it's details. It's an old man, sitting in his dirty combat uniform on the floor with a stench comparable to rotten... Garlic? Onions? Disgusting to say the least. You're surprised that the undead don't mind him, though he is surprised you mind him.
+#m Old Man|Thomas.png|"Oh? Can you... See me?"
 #choice
-	intro_help|Help
+	intro_help|Answer
 	intro_leave|Ignore
 *intro_leave
-#m AS you try to leave the old man suddenly raises his voice.
-#m Patrick|Thomas.png|"Oi, wait! Please, I'll give you everything you need, just don't leave me!"
+#m You try to stay as calm as possible, and act like you don't notice this strange figure at all.
+#m Old Man|Thomas.png|"What'd I even think..."
 *intro_help
-#m You decide to help the old man to dig his way out.
+#m "Y-Yes, I can...?"
+#m Old Man|Thomas.png|"Well, fuck me sideways..."
 #fade_out black
 #set_flag pa_intro,true
 #npc_update Patrick
