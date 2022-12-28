@@ -42,24 +42,26 @@
 
 *loop
 #is_quest pa_q1|locked
-	#m *Patrick asks for help*
+	#m Patrick Gervais|Thomas.png|"Ah, want to help? Alright, I'm in need of some Painkiller Pills... You got any?"
 	#quest_unlock pa_q1
-	#m *Player checks his pockets*
+	#m *You check your pockets for Pills...*
 	#has_item Base.Pills,2
-		#jump pa_q1_found
-	#m *But finds nothing and decides to look for it in the Tent*
+		#m "Yes, I do actually."
+			#jump pa_q1_found
+	#m Patrick Gervais|Thomas.png|"Nothing? Ah, well... If you look behind me, there's a Tent with a massive Dish, alright? I remember fondly there being some Pills, can you grab some for me?"
 	#task_unlock pa_q1|t2
 	#exit
 #is_quest pa_q1|unlocked,uncompleted
-	#m *Patrick asked if we found the pills*
+	#m Patrick Gervais|Thomas.png|"Ah, hey, do you have the Pills?"
 	#has_item Base.Pills,2
 		*pa_q1_found
 		#remove_item Base.Pills,2
-		#m *Player gives Patrick his pills*
-		#m *Patrick is very thankful!*
+		#m *You search your pockets and hand Patrick your Pills*
+		#m Patrick Gervais|Thomas.png|Patrick takes the Pills thankfully, and pops one in immeaditly. "Thank you, my friend!" he says, with a tired smile.
 		#set_flag pa_q1_completed,true
+		#npc_update
 		#exit
-	#m *Player answers that he hasn't found them yet*
+	#m "No, not yet. I'll be back soon.
 	#exit
-#m Patrick|Thomas.png|"Glad to see you alive, my friend!"
+#m Patrick Gervais|Thomas.png|""
 #exit
