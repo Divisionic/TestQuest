@@ -20,14 +20,24 @@
 #reveal Patrick
 #m Old Man|Thomas.png|"I- Are you- Wha- D- You're human?"
 #choice
-	sarcasm|"Well, I feel human enough, not sure about you though."
-	honest|"Yeah, I'm human...?"
-*sarcasm
+	intro_sarcasm|"Well, I feel human enough, not sure about you though."
+	intro_honest|"Yeah, I'm human...?"
+*intro_sarcasm
 #m Old Man|Thomas.png|The old man suddenly laughs up, his voice raspy and old, though somewhat happy, "Hah! Hehe, I may not be beautiful, but I'm surely Human... Or, I believe that too, I think."
-	#jump 
-*honest 
+	#jump continuation
+*intro_honest 
 #m Old Man|Thomas.png|The old man chuckles, his voice raspy and old, though somewhat happy, "Hehe... Apologies, I'm just... I'd say amazed, to say the least. I haven't... It's been too long since I saw someone."
-	#jump 
+	#jump continuation
+*continuation
+#m Patrick Garvis|Thomas.png|scratches his head, and begins to speak: "My uh... My Name is Patrick Garvis. Held the line here since... 1994? I can't remember. The only thing I know for real is that the pain in my leg won't go away..."
+#choice
+	intro_question|Offer your help
+	intro_deny|Don't say anything
+*intro_question
+#m "Can I help you somehow?"
+#jump loop
+*intro_deny
+#m Patrick Garvis|Thomas.png|"Ergh, I need a bit for myself... When you've got time, come and talk to me again, will you?"
 #exit
 
 *loop
