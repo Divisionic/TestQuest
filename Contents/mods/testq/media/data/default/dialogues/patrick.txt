@@ -10,6 +10,7 @@
 *intro_leave
 #m You try to stay as calm as possible, and act like you don't notice this strange figure at all.
 #m Old Man|Thomas.png|"What'd I even think..."
+#exit
 *intro_help
 #m "Yes, I can...?"
 #m Old Man|Thomas.png|"Holy shit..."
@@ -29,7 +30,7 @@
 #m Old Man|Thomas.png|The old man chuckles, his voice raspy and old, though somewhat happy, "Hehe... Apologies, I'm just... I'd say amazed, to say the least. I haven't... It's been too long since I saw someone."
 	#jump continuation
 *continuation
-#m Patrick Garvis|Thomas.png|scratches his head, and begins to speak: "My uh... My Name is Patrick Garvis. Held the line here since... 1994? I can't remember. The only thing I know for real is that the pain in my leg won't go away..."
+#m Patrick Garvis|Thomas.png|He scratches his head, and begins to speak: "My uh... My Name is Patrick Garvis. Held the line here since... 1994? I can't remember. The only thing I know for real is that the pain in my leg won't go away..."
 #choice
 	intro_question|Offer your help
 	intro_deny|Don't say anything
@@ -59,9 +60,10 @@
 		#m *You search your pockets and hand Patrick your Pills*
 		#m Patrick Gervais|Thomas.png|Patrick takes the Pills thankfully, and pops one in immeaditly. "Thank you, my friend!" he says, with a tired smile.
 		#set_flag pa_q1_completed,true
-		#npc_update
+		#npc_update Patrick
+		#m Patrick Gervais|Thomas.png|"Geez... I uh... Yeah, I think I need to sit down again... Thank you again."
 		#exit
 	#m "No, not yet. I'll be back soon.
 	#exit
-#m Patrick Gervais|Thomas.png|""
+#m Patrick Gervais|Thomas.png|"Hey, I... Sorry, my uh... My face is tired. I need to nap..."
 #exit
