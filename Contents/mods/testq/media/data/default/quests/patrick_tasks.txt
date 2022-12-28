@@ -1,8 +1,8 @@
 *pa_q1_t2
-#name Arrive at the Tent
+#name Journey to the Tent!
 *pa_q1_t3
-#name Kill Zombies
+#name Slay any Zombie inside the Tent!
 *pa_q1_t4
-#name Look for Painkillers in the Tent
+#name Quest! For the Painkillers...
 *pa_q1_t6
-#name Give Patrick his Pills
+#name Deliver the Pills!
