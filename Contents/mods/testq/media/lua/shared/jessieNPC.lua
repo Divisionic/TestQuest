@@ -10,7 +10,7 @@ local jessie_1 = {
         { "Shoes_Random", 1 },
     },
      haircut = { "Long", {0.65, 0.64, 0.62} },
-     name = "jessie_normal",
+     name = "jess_normal",
      script = "Base.FemaleFolk"
 
 };
