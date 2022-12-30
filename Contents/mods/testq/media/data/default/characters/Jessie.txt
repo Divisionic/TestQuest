@@ -1,4 +1,4 @@
-#name Jessie|Jessica
+#name Jess|Jessica
 #set_stat Jessie|reputation|0
 
 #desc Name: Jessica
