@@ -1,0 +1,23 @@
+#name Jessie|Jessica
+#set_stat Jessie|reputation|0
+
+#desc Name: Jessica
+#desc_append: Age: Unknown
+
+#is_alive Jess,true
+    #desc_append Status: Alive
+    #jump after_status
+#desc_append Status: Deceased
+
+*after_status
+#desc_append A strange girl, sitting by a Bus-Stop nearby and waiting for something that will never arrive.
+#is_flag Jessie_secret,true
+    #desc_append She likes to hum a song for herself when alone...
+#is_cleared Jess,10,gt
+    #desc_append I think she'll trust me at this point.
+
+#is_stat Jess,reputation,10,gt
+    #desc_append I think she'll answer me more confidently now.
+    #exit
+#desc_append She's way to cautios to speak to me.
+#exit
