@@ -24,7 +24,7 @@ local jessica_1 = {
     clothes = {
         { "Base.Hat_WoolyHat", 0},
         { "Tshirt_ArmyGreen", 0},
-        { "Trousers_CamoDesert", 0},
+        { "Base.Trousers_Denim", 0},
         { "Base.PonchoGreen", 0},
         { "Socks_Ankle", {0.20, 0.31, 0.25} },
         { "Shoes_Random", 1 },
