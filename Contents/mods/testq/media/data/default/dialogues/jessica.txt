@@ -17,10 +17,6 @@
     js_talk1|"Are you... Ok?"
     js_dull1|"Jesus christ what the fuck happened to you!?"
     js_leave1|Leave
-*js_talk1
-#m As softly as you can, you ask "Are you... Ok?"
-#m Young Girl|"... Yeah." she answers, dull. You expect a feminine pitch, yet it sounded deep, as if she hasn't used her voice in decades.
-#exit
 *js_dull1
 #m "Jesus christ what the fuck happened to you!?"
 #m Young girl|"..." she doesn't answer, and just continues to stare at you. You feel a sense of unease, and have a feeling this wasn't the way to go.
@@ -29,4 +25,8 @@
     js_leave2|Leave
 *js_leave2
 #m "...I...uhm..." You feel creeped out by her, and decide to leave. You look back at her, but she already has returned to the position you found her in.
+#exit
+*js_talk1
+#m As softly as you can, you ask "Are you... Ok?"
+#m Young Girl|"... Yeah." she answers, dull. You expect a feminine pitch, yet it sounded deep, as if she hasn't used her voice in decades.
 #exit
