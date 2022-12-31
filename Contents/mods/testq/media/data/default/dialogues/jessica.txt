@@ -29,4 +29,41 @@
 *js_talk1
 #m As softly as you can, you ask "Are you... Ok?"
 #m Young Girl|"... Yeah." she answers, dull. You expect a feminine pitch, yet it sounded deep, as if she hasn't used her voice in decades.
+#choice
+    js_question1|"Who are you?"
+    js_question2|"What are you doing here?"
+    js_leave3|"I'll... Gotta go."
+*js_leave3
+#m "I... Gotta go." As you leave her alone, she looks after you for a few seconds, before resting her head in the same position again when you first found her.
+#exit
+*js_question2
+#m "What are you doing here?"
+#m Young girl|"... I'm waiting...for the bus to arrive." she says, each word sounding a little bit higher then the last one, as if she tries to get her old pitch again.
+#m Confused, you ask "You uh... How long have you been waiting for?"
+#m Young girl|"... Soon." She looks at her wristwatch, but you notice it's broken. then points at the torn piece of paper on the wall, and says "My Bus should arrive... Soon..."
+#choice
+    js_question1|"Who are you?"
+    js_question3|"I... You do know that Busses don't exist anymore?"
+    js_question4|"What's a bus?"
+    js_leave3|"I... Gotta go."
+*js_question4
+#m Confused, you ask "What's a bus?"
+#m Young girl|"..." She doesn't say anything, but instead squints her eyes slightly as if she was confused by your question. Finally, she says "I... I'm just waiting for my bus..."
+#choice
+    js_question1|"Who are you?"
+    js_question3|"I... You do know that busses don't exist anymore?"
+    js_leave3|"I... Gotta go."
+*js_question3
+#m "I... You do know that busses don't exist anymore?"
+#m Young girl|"What... Are you talking... about?" She squints her eyes, very confused by what you said. "It... It'll come... Soon..."
+#choice
+    js_question1|"Who are you?"
+    js_leave3|"I... Gotta go."
+*js_question1
+#m "Who are you?"
+#m Jessica|"... I'm Jessica... Who are you?"
+#m "I'm..."
+#fade_out
+#fade_in
+#m You introduced yourself to Jessica, but she just nods. She'll probably forgot your name already.
 #exit
