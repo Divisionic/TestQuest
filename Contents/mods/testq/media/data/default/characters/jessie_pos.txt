@@ -1,1 +1,0 @@
-#npc_create Jess|jess_normal|sit|1111,1920,0|E
