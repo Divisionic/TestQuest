@@ -1,0 +1,15 @@
+#quest js_q1
+    #task t1|unlocked|hidden
+        #set FindItem|Base.Crisps2
+    #task t2
+        #set GotoLocation|1128,1976,0|building
+        #action UnlockTask|js_q1|t3
+    #task t3
+        #set LootContainer|shelves|1128,1981,0|Base.Crisps2,false
+    #task t4|unlocked|hidden
+        #set TaskCondition|js_q1|t1/t2,t3
+        #action UnlockTask|js_q1|t5
+    #task t5
+        #set RaiseFlag|js_q1_completed
+        #action Reward|Base.GranolaBar,1,common
+        #action CompleteQuest|js_q1
