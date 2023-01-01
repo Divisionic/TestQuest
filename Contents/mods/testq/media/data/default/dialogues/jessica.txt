@@ -1,69 +1,131 @@
-#is_flag js_intro,true
-    #jump loop
+#is_flag js_intro,true|quest_not_accepted,true
+    #jump quest_offer
+#is_flag js_intro,true|quest_not_accepted,false|quest_active,true
+    #jump js_quest1
+#is_flag js_intro,true|quest_not_accepted,false|quest_active,false
+    #jump skipintro
 
 *intro
 #m You spot a lonely girl, seemingly not older the 19 Years, sit beneath a bus stop. Her clothes are dirty, she has very pale, nearly grey skin, and her stench is comparable to rotten... Garlic? Onions? Her head hangs low, at closer inspection you notice she misses an eye, but that doesn't mind her.
-#m Young girl|"..."
+#m Young girl|Jessica.png|"..."
 #choice
     js_intro|"... Hello?"
     js_leave1|Leave
+
 *js_leave1
 #m "..." You feel a bit creeped out by her, and decide to go away. She doesn't say anything, nor are you sure if she even noticed you at all.
 #exit
+
 *js_intro
 #m She slowly looks up, and you can see her facial details better now. She is clearly missing an eye, is extremely pale, and has nearly milkwhite Eyes.
-#m Young girl|"... Hm?"
+#m Young girl|Jessica.png|"... Hm?"
 #choice
     js_talk1|"Are you... Ok?"
     js_dull1|"Jesus christ what the fuck happened to you!?"
     js_leave1|Leave
+
 *js_dull1
-#m "Jesus christ what the fuck happened to you!?"
-#m Young girl|"..." she doesn't answer, and just continues to stare at you. You feel a sense of unease, and have a feeling this wasn't the way to go.
+#m Young girl|Jessica.png|"..." she doesn't answer, and just continues to stare at you. You feel a sense of unease, and have a feeling this wasn't the way to go.
 #choice
     js_talk1|"Are you... Ok?"
     js_leave2|Leave
+
 *js_leave2
 #m "...I...uhm..." You feel creeped out by her, and decide to leave. You look back at her, but she already has returned to the position you found her in.
 #exit
+
 *js_talk1
-#m As softly as you can, you ask "Are you... Ok?"
-#m Young Girl|"... Yeah." she answers, dull. You expect a feminine pitch, yet it sounded deep, as if she hasn't used her voice in decades.
+#m Young girl|Jessica.png|"... Yeah." she answers, dull. You expect a feminine pitch, yet it sounded deep, as if she hasn't used her voice in decades.
 #choice
     js_question1|"Who are you?"
     js_question2|"What are you doing here?"
     js_leave3|"I'll... Gotta go."
+
 *js_leave3
-#m "I... Gotta go." As you leave her alone, she looks after you for a few seconds, before resting her head in the same position again when you first found her.
+#m As you leave her alone, she looks after you for a few seconds, before resting her head in the same position again when you first found her.
 #exit
+
 *js_question2
-#m "What are you doing here?"
-#m Young girl|"... I'm waiting...for the bus to arrive." she says, each word sounding a little bit higher then the last one, as if she tries to get her old pitch again.
+#m Young girl|Jessica.png|"... I'm waiting...for the bus to arrive." she says, each word sounding a little bit higher then the last one, as if she tries to get her old pitch again.
 #m Confused, you ask "You uh... How long have you been waiting for?"
-#m Young girl|"... Soon." She looks at her wristwatch, but you notice it's broken. then points at the torn piece of paper on the wall, and says "My Bus should arrive... Soon..."
+#m Young girl|Jessica.png|"... Soon." She looks at her wristwatch, but you notice it's broken. then points at the torn piece of paper on the wall, and says "My Bus should arrive... Soon..."
 #choice
     js_question1|"Who are you?"
     js_question3|"I... You do know that Busses don't exist anymore?"
     js_question4|"What's a bus?"
     js_leave3|"I... Gotta go."
+
 *js_question4
-#m Confused, you ask "What's a bus?"
-#m Young girl|"..." She doesn't say anything, but instead squints her eyes slightly as if she was confused by your question. Finally, she says "I... I'm just waiting for my bus..."
+#m Young girl|Jessica.png|"..." She doesn't say anything, but instead squints her eyes slightly as if she was confused by your question. Finally, she says "I... I'm just waiting for my bus..."
 #choice
     js_question1|"Who are you?"
     js_question3|"I... You do know that busses don't exist anymore?"
     js_leave3|"I... Gotta go."
+
 *js_question3
-#m "I... You do know that busses don't exist anymore?"
-#m Young girl|"What... Are you talking... about?" She squints her eyes, very confused by what you said. "It... It'll come... Soon..."
+#m Young girl|Jessica.png|"What... Are you talking... about?" She squints her eyes, very confused by what you said. "It... It'll come... Soon..."
 #choice
     js_question1|"Who are you?"
     js_leave3|"I... Gotta go."
+
 *js_question1
-#m "Who are you?"
-#m Jessica|"... I'm Jessica... Who are you?"
-#m "I'm..."
+#m Jessica|Jessica.png|"... I'm Jessica... Who are you?"
+#m You begin to introduce yourself.
 #fade_out
+#set_flag js_intro,true
+#reveal Jessica
 #fade_in
-#m You introduced yourself to Jessica, but she just nods. She'll probably forgot your name already.
+#m You introduced yourself to Jessica, but she just nods. She probably forgot your name already.
+#m Jessica|Jessica.png|"Hey... Can you help me...?"
+#choice
+    js_quest1|"Sure."
+    js_leave4|"Uh... I can't right now, sorry."
+
+*js_leave4
+#m She looks at you for a few seconds, tilting her head, but then looks down again.
+#set_flag quest_not_accepted,true
 #exit
+
+*quest_offer
+#choice
+    js_co|"Jessica?"
+    js_leave5|You do nothing.
+*js_co
+#m Jessica|Jessica.png|Jessica slowly looks up, and gets a raspy but this time pitched "...Hm?" out. Suddenly, she remembers something, and asks "Oh... You're back?"
+#choice
+    js_quest1|"I came to help."
+    js_leave5|"I uh... Forgot something, I'll be back in a minute."
+
+*js_leave5
+#exit
+
+*js_quest1
+#set_flag quest_not_accepted,false|quest_active,true
+#is_quest js_q1|locked
+    #m Jessica|Jessica.png|"Can you... Bring me chips... From the Gas Station? I'd go... Myself... But I can't... I feel weak..." She hands you a bit of money, and you take it without saying anything.
+    #quest_unlock js_q1
+    #add_item Base.Money
+    #has_item Base.Crisps2
+        #m "I actually have some for you, here."
+            #jump js_q1_found
+    #task_unlock js_q1|t2
+    #exit
+#is_quest js_q1|unlocked,uncompleted
+    #m Jessica|Jessica.png|"Do you... Have it...?"
+    #has_item Base.Crisps2
+        *js_q1_found
+        #m *You look for the Crisps and hand it to her* "Yeah, here."
+        #remove_item Base.Crisps2
+        #m Jessica|Jessica.png|"Thank you... Very much... I don't have much... But take that... Granola Bar... I don't like it..."
+        #set_flag js_q1_completed,true|quest_active,false
+        #m Jessica|Jessica.png|"I'm... Tired... So... Increadibly... Tired..."
+        #m You notice her sacking in slightly, but don't do anything. Maybe she's at peace now. Hopefully.
+        #exit
+    #m "Not yet. Soon, though."
+    #exit
+
+*skipintro
+#m Jessica is sitting there, not reacting at all.
+#exit
+
+--don't forget to set flag quest_active to false on quest completion
