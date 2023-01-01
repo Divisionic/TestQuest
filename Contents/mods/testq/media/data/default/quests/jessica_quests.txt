@@ -1,0 +1,3 @@
+*js_q1
+#name The young girl Jessica
+#desc Jessica gave me money and asked me to bring some Chips from the Gas Station. I hope they still have some...
