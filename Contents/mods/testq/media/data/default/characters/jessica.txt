@@ -13,11 +13,11 @@
 #desc_append A strange girl, sitting by a Bus-Stop nearby and waiting for something that will never arrive.
 #is_flag Jessie_secret,true
     #desc_append She likes to hum a song for herself when alone...
-#is_cleared Jessica,10,gt
-    #desc_append I think she'll trust me at this point.
+#is_cleared Jessica,1,gt
+	#desc_append She's probably at peace now...
 
-#is_stat Jessica,reputation,10,gt
-    #desc_append I think she'll answer me more confidently now.
-    #exit
-#desc_append She's way to cautios to speak to me.
+#is_stat Jessica,reputation,1,gt
+	#desc_append She's probably at peace now...
+	#exit
+#desc_append She's reacting passively.
 #exit
