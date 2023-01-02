@@ -1,0 +1,32 @@
+#quest cs_q1
+    #task t1|unlocked
+        #set FindItem|Base.ElectronicsScrap,10
+    #task t2|unlocked|hidden
+        #set TaskCondition|cs_q1|t1
+        #action UnlockTask|cs_q1|t3
+    #task t3
+        #set RaiseFlag|cs_q1_completed
+        #action Reward|Base.Money,1,common
+        #action CompleteQuest|cs_q1
+
+#quest cs_q2
+    #task t1|unlocked
+        #set FindItem|Base.ElectronicsScrap,25
+    #task t2|unlocked|hidden
+        #set TaskCondition|cs_q2|t1
+        #action UnlockTask|cs_q2|t3
+    #task t3
+        #set RaiseFlag|cs_q2_completed
+        #action Reward|Base.Money,3,common
+        #action CompleteQuest|cs_q2
+
+#quest cs_q3
+    #task t1|unlocked
+        #set FindItem|Base.ElectronicsScrap,50
+    #task t2|unlocked|hidden
+        #set TaskCondition|cs_q3|t1
+        #action UnlockTask|cs_q3|t3
+    #task t3
+        #set RaiseFlag|cs_q3_completed
+        #action Reward|Base.Money,7,common
+        #action CompleteQuest|cs_q3

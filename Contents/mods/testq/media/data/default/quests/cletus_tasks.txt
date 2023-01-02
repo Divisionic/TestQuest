@@ -1,0 +1,14 @@
+*cs_q1_t1
+#name Find 10 Scrap Electronics
+*cs_q1_t3
+#name Bring them Electronics to Cletus
+
+*cs_q2_t1
+#name Find 25 Scrap Electronics
+*cs_q2_t3
+#name Bring them Electronics to Cletus
+
+*cs_q3_t1
+#name Find 50 Scrap Electronics
+*cs_q3_t3
+#name Bring them Electronics to Cletus

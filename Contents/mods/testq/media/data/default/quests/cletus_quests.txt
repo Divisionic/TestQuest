@@ -1,0 +1,11 @@
+*cs_q1
+#name 10x Scrap Electronic delivery 
+#desc Promised Cletus 10 Scrap Electronics for some Money, I should bring it to him as soon as possible.
+
+*cs_q2
+#name 25x Scrap Electronic delivery
+#desc Promised Cletus 25 Scrap Electronics for a bit more Money, I really should hurry and bring it.
+
+*cs_q3
+#name 50x Scrap Electronic delivery
+#desc Promised Cletus 50 Scrap Electronics for Money, I'll have to deliver it...
