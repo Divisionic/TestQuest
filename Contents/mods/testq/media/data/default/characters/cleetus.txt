@@ -1,0 +1,14 @@
+#name Cletus|Cletus McNugget
+#set_stat Cletus|reputation|10
+
+#desc Name: Cletus
+#desc_append Age: Unknown
+
+#is_alive Cletus,true
+    #desc_append Status: Alive
+    #jump after_status
+#desc_append Status: Deceased
+
+*after_status
+#desc_append Some old... Young... Man who may or may not be crazy. That doesn't matter though, he's a trader.
+#exit
