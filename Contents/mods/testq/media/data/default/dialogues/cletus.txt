@@ -44,7 +44,7 @@ set_flag trading,false
     cs_leave1|"Nope, sorry."
 
 *cs_offering
-#m Cletus|Cletus.png|"Great Dude, how much ya got?" ((Choose wisely, once a quest is completed it'll go from top to bottom.))
+#m Cletus|Cletus.png|"Great Dude, how much ya got?" ((Once a quest is completed it'll go from top to bottom. You can't redo  the first quest.))
 #choice
     cs_offer1|"Here." (Give 10 Scrap Electronic)
     cs_offer2|"Hope you got my Money man..." (Give 25 Scrap Electronics)|cs_q1_completed
