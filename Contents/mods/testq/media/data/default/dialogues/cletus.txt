@@ -8,6 +8,8 @@
     #jump cs_offer2
 #is_flag cs_intro,true|trading,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,true
     #jump cs_offer3
+#is_flag cs_intro,true|cs_q1_completed,true|cs_q2_completed,true|cs_q3_completed,true
+    #jump place_holder
 
 *intro
 #m You seen a rather skinny man, they look to be sifting through a bin filled with computer parts and looking at it closely.
@@ -42,18 +44,18 @@ set_flag trading,false
     cs_leave1|"Nope, sorry."
 
 *cs_offering
-#m Cletus|Cletus.png|"Great Dude, how much ya got?"
+#m Cletus|Cletus.png|"Great Dude, how much ya got?" ((Choose wisely, once a quest is completed it'll go from top to bottom.))
 #choice
     cs_offer1|"Here." (Give 10 Scrap Electronic)
-    cs_offer2|"Hope you got my Money man..." (Give 25 Scrap Electronics)
-    cs_offer3|"Got a bunch right here!" (Give 50 Scrap Electronics)
+    cs_offer2|"Hope you got my Money man..." (Give 25 Scrap Electronics)|cs_q1_completed
+    cs_offer3|"Got a bunch right here!" (Give 50 Scrap Electronics)|cs_q2_completed
     cs_leave2|"Not right now" [Leave]
 
 *cs_offer1
 #set_flag offer1_accepted,true|offer2_accepted,false|offer3_accepted,false|trading,true
 #is_quest cs_q1|locked
-    #m Cletus|Cletus.png|He licks his teeth, saying "Alright, hehe! Lemme see them goodies..."
     #quest_unlock cs_q1
+    #m Cletus|Cletus.png|He licks his teeth, saying "Alright, hehe! Lemme see them goodies..."
     #has_item Base.ElectronicsScrap,10
         #m "There you go..."
         #jump cs_q1_found
@@ -76,8 +78,8 @@ set_flag trading,false
 *cs_offer2
 #set_flag offer1_accepted,false|offer2_accepted,true|offer3_accepted,false|trading,true
 #is_quest cs_q2|locked
-    #m Cletus|Cletus.png|He smiles and licks his teeth, saying "Oi oi! Lemme see them goodies..."
     #quest_unlock cs_q2
+    #m Cletus|Cletus.png|He smiles and licks his teeth, saying "Oi oi! Lemme see them goodies..."
     #has_item Base.ElectronicsScrap,25
         #m "There you you have it..."
         #jump cs_q2_found
@@ -100,8 +102,8 @@ set_flag trading,false
 *cs_offer3
 #set_flag offer1_accepted,false|offer2_accepted,false|offer3_accepted,true|trading,true
 #is_quest cs_q3|locked
-    #m Cletus|Cletus.png|He begins to drool slightly, licking his lips, saying "OI OI! WHERE- I mean, where are the goodies..."
     #quest_unlock cs_q3
+    #m Cletus|Cletus.png|He begins to drool slightly, licking his lips, saying "OI OI! WHERE- I mean, where are the goodies..."
     #has_item Base.ElectronicsScrap,50
         #m "There you you have it..."
         #jump cs_q3_found
@@ -114,9 +116,13 @@ set_flag trading,false
         *cs_q3_found
         #m You hand him the 50 Scrap Electronics
         #remove_item Base.ElectronicsScrap,50
-        #m Cletus|Cletus.png|"HOLY SHIT YOU ACTUALLY HAVE IT! Here, take this!"
+        #m Cletus|Cletus.png|"HOLY SHIT YOU ACTUALLY HAVE IT! I'm basically dry, here, take this!"
         #set_flag cs_q3_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
         #m You see his eyes shining through the glasses, and he continues to look in the Garbage for more...
         #exit
     #m "Not yet, soon though."
     #exit
+
+*place_holder
+#m Divisionic|Divisionic.jpg|Hello, it's me, Divisionic! If you can read this, that means you completed all the Quests! Congrats! This NPC will be updated soon to be daily completable, so watch out for an update!
+#exit
