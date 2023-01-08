@@ -50,3 +50,19 @@ local cletus_1 = {
 };
 
 table.insert(MFManager.templates, cletus_1);
+
+local jim_1 = {
+    clothes = {
+        { "Tshirt_BusinessSpiffo", 0},
+        { "TrousersMesh_DenimLight", 0},
+        { "Socks_Ankle", {0.20, 0.31, 0.25} },
+        { "Shoes_Random", 1 },
+    },
+     beard = { "PointyChin", {0, 0, 0} },
+     haircut = { "Baldspot", {0, 0, 0} },
+     name = "jim_normal",
+     script = "Base.MaleFolk"
+
+};
+
+table.insert(MFManager.templates, jim_1);
