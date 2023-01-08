@@ -1,4 +1,4 @@
-#quest cs_q1
+#quest cs_q1|daily
     #task t1|unlocked
         #set FindItem|Base.ElectronicsScrap,10
     #task t2|unlocked|hidden
@@ -9,7 +9,7 @@
         #action Reward|Base.Money,1,common
         #action CompleteQuest|cs_q1
 
-#quest cs_q2
+#quest cs_q2|daily
     #task t1|unlocked
         #set FindItem|Base.ElectronicsScrap,25
     #task t2|unlocked|hidden
@@ -20,7 +20,7 @@
         #action Reward|Base.Money,3,common
         #action CompleteQuest|cs_q2
 
-#quest cs_q3
+#quest cs_q3|daily
     #task t1|unlocked
         #set FindItem|Base.ElectronicsScrap,50
     #task t2|unlocked|hidden
