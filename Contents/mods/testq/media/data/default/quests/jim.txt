@@ -1,0 +1,33 @@
+#quest jm_q1|daily
+    #task t1|unlocked
+        #set FindItem|Base.Money,2
+    #task t2|unlocked|hidden
+        #set TaskCondition|jm_q1|t1
+        #action UnlockTask|jm_q1|t3
+    #task t3
+        #set RaiseFlag|jm_q1_completed
+        #action Reward|Base.NailsBox,1,rare
+        #action CompleteQuest|jm_q1
+
+#quest jm_q2|daily
+    #task t1|unlocked
+        #set FindItem|Base.Money,3
+    #task t2|unlocked|hidden
+        #set TaskCondition|jm_q2|t1
+        #action UnlockTask|jm_q2|t3
+    #task t3
+        #set RaiseFlag|jm_q2_completed
+        #action Reward|Base.ScrewsBox,1,rare
+        #action CompleteQuest|jm_q2
+
+#quest jm_q3|daily
+    #task t1|unlocked
+        #set FindItem|Base.ScrapMetal,4
+    #task t2|unlocked|hidden
+        #set TaskCondition|jm_q3|t1
+        #action UnlockTask|jm_q3|t3
+    #task t3
+        #set RaiseFlag|jm_q3_completed
+        #action SelectReward|Base.NailsBox,2,rare|Base.ScrewsBox,2,rare
+        #action CompleteQuest|jm_q3
+

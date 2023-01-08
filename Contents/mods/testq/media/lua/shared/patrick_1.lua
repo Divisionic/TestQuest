@@ -53,8 +53,10 @@ table.insert(MFManager.templates, cletus_1);
 
 local jim_1 = {
     clothes = {
+        { "Hat_BaseballCap", 0},
         { "Tshirt_BusinessSpiffo", 0},
-        { "TrousersMesh_DenimLight", 0},
+        { "Glasses_SafetyGoggles", 0},
+        { "Dungarees", 0},
         { "Socks_Ankle", {0.20, 0.31, 0.25} },
         { "Shoes_Random", 1 },
     },

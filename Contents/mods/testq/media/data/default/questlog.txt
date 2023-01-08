@@ -8,3 +8,6 @@
 
 #entry This weird fellow near the Consortium Trading outpost
     #line cs_intro|Found Cletus behind the Consortiums Trading Outpost. Appearently he's trading Scrap Electronics for Cash... Might be useful in the future.
+
+#entry Jim at Tiger Industries
+    #line jm_intro|Jim is one of the many Cousins from Barb, and he's selling either Nails, Screws or bends metal into 2 of both. He could tell me where Barb is, too.

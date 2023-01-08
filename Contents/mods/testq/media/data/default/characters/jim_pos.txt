@@ -1,0 +1,1 @@
+#npc_create Jim|jim_normal|idle|714,795,0|E

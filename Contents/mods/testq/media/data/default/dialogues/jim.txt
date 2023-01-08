@@ -1,0 +1,169 @@
+#is_flag jm_intro,true|trading,false|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false
+    #jump jm_back
+#is_flag jm_intro,true|trading,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false
+    #jump jm_back
+#is_flag jm_intro,true|trading,true|offer1_accepted,true|offer2_accepted,false|offer3_accepted,false
+    #jump jm_offer1
+#is_flag jm_intro,true|trading,true|offer1_accepted,false|offer2_accepted,true|offer3_accepted,false
+    #jump jm_offer2
+#is_flag jm_intro,true|trading,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,true
+    #jump jm_offer3
+#is_flag jm_intro,true|jm_q1_completed,true|jm_q2_completed,true|jm_q3_completed,true
+    #jump place_holder
+
+*intro
+#m You see a well dressed man behind the Cash Register. He's looking inside the register, probably counting money.
+#choice
+    jm_intro|"Hello?"
+
+*jm_intro
+#m The Man looks up to you, and smiles.
+#m Jim|jim.png|"Hello! My Name is Jim, and welcome to Tiger Industries! How can I help you?"
+#choice
+    jm_continue1|"What is this Place?"
+    jm_leave1|"Oh, I'm fine. Just wanted to look around, nothing more." [Leave]
+
+*jm_leave1
+#exit
+
+*jm_continue1
+#m Jim|jim.png|His smile got brighter "This is Tiger Industries! We're a carpentry company, Barb, my cousin, is the one who does the heavy lifting, I'm the one selling the little stuff."
+#set_flag jm_intro,true|trading,true
+#choice
+    jm_offering|"What are you selling today?..."
+    jm_leave2|"I'll buy something next time, then..." [Leave]
+
+*jm_leave2
+#set_flag trading,false
+#exit
+
+*jm_back
+#m Jim|jim.png|He notices you coming by and is puzzled, but realizes who you are: "Ah, welcome back! Would you like to buy some more?"
+#choice
+    jm_offering|"Yup."
+    jm_leave1|"Nope, sorry."
+
+*jm_offering
+#m Jim|jim.png|"Today I'm selling 1 Box of Nails for 2 Dollars, or 1 Box of Screws for 3 Dollars. I can also bend some Scrap Metal into two of both! What would you like to have? Oh, and keep in mind, I can only do this once a day. For... Buisness reasons."
+#choice
+    jm_offer1|"A box of Nails, please." (Give 2 Dollars)
+    jm_offer2|"A box of Screws, please." (Give 3 Dollars)
+    jm_offer3|"Can you bend me something?" (Give 4 Scrap Metal)
+    jm_barb|"Hey, where's Barb?"
+    jm_leave2|"Not right now" [Leave]
+
+*jm_offering_1
+#m Jim|jim.png|"You could choose the other one, maybe?"
+#choice
+    jm_offer1|"A box of Nails, please." (Give 2 Dollars)
+    jm_offer2|"A box of Screws, please." (Give 3 Dollars)
+    jm_offer3|"Can you bend me something?" (Give 4 Scrap Metal)
+    jm_barb|"Hey, where's Barb?"
+    jm_leave2|"Not right now" [Leave]
+
+*jm_offer1
+#set_flag offer1_accepted,true|offer2_accepted,false|offer3_accepted,false|trading,true
+#is_quest jm_q1|locked
+    #quest_unlock jm_q1
+    #m Jim|jim.png|He smiles, saying "Great! Two dollars, please."
+    #has_item Base.Money,2
+        #m "There you go..."
+        #jump jm_q1_found
+    #task_unlock jm_q1|t2
+    #m Jim|jim.png|"Oh, you don't have the Money? Hm... You know what, come back when you have it. Until then, no other trading. Sorry."
+    #exit
+#is_quest jm_q1|unlocked,uncompleted
+    #m Jim|jim.png|He notices you and asks "Oh, do you have the Money?"
+    #has_item Base.Money,2
+        *jm_q1_found
+        #m You hand him the 2 Dollars...
+        #remove_item Base.Money,2
+        #m Jim|jim.png|"Very well! Here, have that."
+        #set_flag jm_q1_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
+        #m He puts the money into the Register, and beginns to count through the Money...
+        #exit
+    #m "Not yet."
+    #exit
+#is_flag jm_q1_completed,true|trading,true
+    #jump q_complete
+    #exit
+
+*jm_offer2
+#set_flag offer1_accepted,false|offer2_accepted,true|offer3_accepted,false|trading,true
+#is_quest jm_q2|locked
+    #quest_unlock jm_q2
+    #m Jim|jim.png|"Good! 3 Dollars, then!"
+    #has_item Base.Money,3
+        #m "There you have it..."
+        #jump jm_q2_found
+    #task_unlock jm_q2|t2
+    #m Jim|jim.png|"No Money? No problem, come back later and bring it to me. Until then, no other trading. Sorry."
+    #exit
+#is_quest jm_q2|unlocked,uncompleted
+    #m Jim|jim.png|He notices you and asks "Ah, did you bring the Money?"
+    #has_item Base.Money,3
+        *jm_q2_found
+        #m You hand him the 3 Dollars
+        #remove_item Base.Money,3
+        #m Jim|jim.png|"Sweet! Here, have this Box."
+        #set_flag jm_q2_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
+        #m You see him look at something under the Table, before reading something off from the Register...
+        #exit
+    #m "Not yet, soon though."
+    #exit
+#is_flag jm_q2_completed,true|trading,true
+    #jump q_complete
+    #exit
+
+*jm_offer3
+#set_flag offer1_accepted,false|offer2_accepted,false|offer3_accepted,true|trading,true
+#is_quest jm_q3|locked
+    #quest_unlock jm_q3
+    #m Jim|jim.png|He prepares a few tools, saying "Oh, a bit of Metalworking then! Over with the Scrap Metal, hehe!"
+    #has_item Base.ScrapMetal,4
+        #m "There you you have it..."
+        #jump jm_q3_found
+    #task_unlock jm_q3|t2
+    #m Jim|jim.png|"You don't have it? Aww... I prepared the Tools! Hm... Just come back with the Metal, and I'll bend it for you. I prepared the Tools after all."
+    #exit
+#is_quest jm_q3|unlocked,uncompleted
+    #m Jim|jim.png|He notices you and asks "Ah, do you have the Metal?"
+    #has_item Base.ScrapMetal,4
+        *jm_q3_found
+        #m You hand him the 4 Scrap Metal
+        #remove_item Base.ScrapMetal,4
+        #m Jim|jim.png|"Hoo-kay, here we go!"
+        #set_flag jm_q3_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
+        #m He wipes his hands clean, and returns to the Cash Register...
+        #exit
+    #m "Not yet, soon though."
+    #exit
+#is_flag jm_q3_completed,true|trading,true
+    #jump q_complete
+    #exit
+
+*q_complete
+#is_flag jm_q1_completed,true|jm_q2_completed,true|jm_q3_completed,true|trading,true
+    #jump finish
+#m Jim|jim.png|"Hm... Sorry, I think I can't sell anymore. I have to keep some for Barb after all. Come back tomorrow when we have more, ok?"
+    #jump jm_offering_1
+#exit
+
+*jm_barb
+#m Jim|jim.png|"Oh, I... Don't really know. You can reach her over the Radio though! Try the 75.4 MHz Frequency." ((Or ping @Tiger as Barb on #public-radio))
+    #jump jm_offering
+
+*jm_barb1
+#m Jim|jim.png|"Oh, I... Don't really know. You can reach her over the Radio though! Try the 75.4 MHz Frequency." ((Or ping @Tiger as Barb on #public-radio)) "Until next time, though!"
+    #exit
+
+*finish
+#m Jim|jim.png|"Yeah, I- Oh. I'm blank. Hm. Could you come back tomorrow? I can give you more tomorrow!" 
+#choice
+    jm_barb1|"Before I go, where is Barb?"
+    jm_leave2|[Leave]
+#exit
+
+*place_holder
+#m Divisionic|Divisionic.png|Hello, it's me, Divisionic! If you can read this, that means you completed all the Quests! Congrats! This NPC should be updated now, come again tomorrow and check if you can repeat the Quest!
+#exit

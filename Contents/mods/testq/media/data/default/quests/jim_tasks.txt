@@ -1,0 +1,14 @@
+*jm_q1_t1
+#name Find 2 Dollars
+*jm_q1_t3
+#name Bring the 2 Dollars to Jim
+
+*jm_q2_t1
+#name Find 3 Dollars
+*jm_q2_t3
+#name Bring the 3 Dollars to Jim
+
+*jm_q3_t1
+#name Find 4 Scrap Metal
+*jm_q3_t3
+#name Bring the 4 Scrap Metal to Jim

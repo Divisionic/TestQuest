@@ -1,0 +1,11 @@
+*jm_q1
+#name 2 Dollars for Nails
+#desc Wanted to buy some Nails for 2 Dollars, but I didn't have enough on me. I should bring it soon... Or now?
+
+*jm_q2
+#name 3 Dollars for Screws
+#desc Wanted to buy some Screws for 3 Dollars, but I didn't have enough on me. I really should hurry and bring it.
+
+*jm_q3
+#name Scrap Metal for Screws/Nails
+#desc Made an order with 4 Scrap Metals to get either 2 Boxes of Nails or Screws. I should bring it to Jim soon.
