@@ -1,0 +1,18 @@
+#name Jim|Jim
+#set_stat Jim|reputation|5
+
+#desc Name: Jim
+#desc_append Age: 40
+
+#is_alive Jim,true
+    #desc_append Status: Alive and well!
+    #jump after_status
+#desc_append Status: Deceased
+
+*after_status
+#desc_append One of the many Cousins from Barb, part of Tiger Industries. If I ever need Nails, I should talk to him.
+#is_cleared Jim,1,gt
+	#desc_append He's sees me as a Customer!
+
+#desc_append He's reacting.
+#exit
