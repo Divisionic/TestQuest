@@ -152,7 +152,7 @@ set_flag trading,false
 #set_flag offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,true|offer5_accepted,false|trading,true
 #is_quest cs_q4|locked
     #quest_unlock cs_q4
-    #m Cletus|CletusNew.png|He begins to drool slightly, licking his lips, saying "OI OI! WHERE- I mean, where are the goodies..."
+    #m Cletus|CletusNew.png|He whistles, saying "OI OI! WHERE- I mean, where are the goodies..."
     #has_item Base.Doorknob,5
         #m "There you you have it..."
         #jump cs_q4_found
@@ -179,7 +179,7 @@ set_flag trading,false
 #set_flag offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,true|trading,true
 #is_quest cs_q5|locked
     #quest_unlock cs_q5
-    #m Cletus|CletusNew.png|He begins to drool slightly, licking his lips, saying "OI OI! WHERE- I mean, where are the goodies..."
+    #m Cletus|CletusNew.png|"I WANT IT, WHERE- I mean, where are the goodies..."
     #has_item Base.Hinge,5
         #m "There you you have it..."
         #jump cs_q5_found
