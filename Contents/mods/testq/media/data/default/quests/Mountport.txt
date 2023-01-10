@@ -1,0 +1,16 @@
+#quest mount_q1|unlocked|hidden
+    #task t1|unlocked|hidden
+        #set GotoLocation|1746,451,2139,927,0|true
+        #action RunScript|mtp.txt,inside
+        #action ApplyStat|Stress,100
+        #action ApplyStat|Unhappiness,100
+        #action ApplyStat|Fear,100
+        #action UnlockTask|mount_q1|t2
+    #task t2|locked|hidden
+        #set GotoLocation|1959,1019,1970,1030,0|true
+        #action RunScript|mtp.txt,outside
+
+
+
+--1746,451,2139,927,0|true
+--#set QuestArea|Mountport|1746,451,2139,927,0|1|m|mtp.txt,no_return

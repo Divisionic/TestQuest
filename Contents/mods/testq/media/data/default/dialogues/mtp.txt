@@ -1,0 +1,16 @@
+*inside
+#set_flag in_mountport,true|out_mountport,false
+#show_panel
+#m You should get out.
+#exit
+
+*outside
+#set_flag in_mountport,false|out_mountport,true
+#show_panel
+#m Don't come back.
+#exit
+
+-*no_return
+    #show_panel
+    #m Don't return.
+    #exit
