@@ -2,12 +2,16 @@
     #jump cs_back
 #is_flag cs_intro,true|trading,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false
     #jump cs_back
-#is_flag cs_intro,true|trading,true|offer1_accepted,true|offer2_accepted,false|offer3_accepted,false
+#is_flag cs_intro,true|trading,true|offer1_accepted,true|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false
     #jump cs_offer1
-#is_flag cs_intro,true|trading,true|offer1_accepted,false|offer2_accepted,true|offer3_accepted,false
+#is_flag cs_intro,true|trading,true|offer1_accepted,false|offer2_accepted,true|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false
     #jump cs_offer2
-#is_flag cs_intro,true|trading,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,true
+#is_flag cs_intro,true|trading,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,true|offer4_accepted,false|offer5_accepted,false
     #jump cs_offer3
+#is_flag cs_intro,true|trading,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,true|offer5_accepted,false
+    #jump cs_offer4
+#is_flag cs_intro,true|trading,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,true
+    #jump cs_offer5
 #is_flag cs_intro,true|cs_q1_completed,true|cs_q2_completed,true|cs_q3_completed,true
     #jump place_holder
 
