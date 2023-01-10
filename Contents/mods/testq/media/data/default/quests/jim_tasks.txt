@@ -1,12 +1,12 @@
 *jm_q1_t1
-#name Find 2 Dollars
+#name Find 2 pieces of Unusable Metal
 *jm_q1_t3
-#name Bring the 2 Dollars to Jim
+#name Bring the 2 pieces of Unusable Metal to Jim
 
 *jm_q2_t1
-#name Find 3 Dollars
+#name Find 3 pieces of Unusable Metal
 *jm_q2_t3
-#name Bring the 3 Dollars to Jim
+#name Bring the 3 pieces of Unusable Metal to Jim
 
 *jm_q3_t1
 #name Find 4 Scrap Metal

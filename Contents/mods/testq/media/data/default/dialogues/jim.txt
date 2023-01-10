@@ -70,13 +70,13 @@
         #m "There you go..."
         #jump jm_q1_found
     #task_unlock jm_q1|t2
-    #m Jim|jim.png|"Oh, you don't have the Money? Hm... You know what, come back when you have it. Until then, no other trading. Sorry."
+    #m Jim|jim.png|"Oh, you don't have the Metal? Hm... You know what, come back when you have it. Until then, no other bending. Sorry."
     #exit
 #is_quest jm_q1|unlocked,uncompleted
     #m Jim|jim.png|He notices you and asks "Oh, do you have the Money?"
     #has_item Base.Money,2
         *jm_q1_found
-        #m You hand him the 2 Dollars...
+        #m You hand him the 2 pieces of Unusable Metal...
         #remove_item Base.UnusableMetal,2
         #m Jim|jim.png|"Very well! Here, have that."
         #set_flag jm_q1_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
@@ -92,18 +92,18 @@
 #set_flag offer1_accepted,false|offer2_accepted,true|offer3_accepted,false|trading,true
 #is_quest jm_q2|locked
     #quest_unlock jm_q2
-    #m Jim|jim.png|"Good! 3 Dollars, then!"
+    #m Jim|jim.png|"Good! 3 pieces of Unusable Metal, then!"
     #has_item Base.UnusableMetal,3
         #m "There you have it..."
         #jump jm_q2_found
     #task_unlock jm_q2|t2
-    #m Jim|jim.png|"No Money? No problem, come back later and bring it to me. Until then, no other trading. Sorry."
+    #m Jim|jim.png|"No Metal? No problem, come back later and bring it to me. Until then, no other bending. Sorry."
     #exit
 #is_quest jm_q2|unlocked,uncompleted
     #m Jim|jim.png|He notices you and asks "Ah, did you bring the Money?"
     #has_item Base.Money,3
         *jm_q2_found
-        #m You hand him the 3 Dollars
+        #m You hand him the 3 pieces of Unusable Metal
         #remove_item Base.UnusableMetal,3
         #m Jim|jim.png|"Sweet! Here, have this Box."
         #set_flag jm_q2_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
