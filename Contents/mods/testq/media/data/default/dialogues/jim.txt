@@ -27,10 +27,10 @@
 #exit
 
 *jm_continue1
-#m Jim|jim.png|His smile got brighter "This is Tiger Industries! We're a carpentry company, Barb, my cousin, is the one who does the heavy lifting, I'm the one selling the little stuff."
+#m Jim|jim.png|His smile got brighter "This is Tiger Industries! We're a carpentry company, Barb, my cousin, is the one who does the heavy lifting, I'm the one selling, or rather, bending the little stuff."
 #set_flag jm_intro,true|trading,true
 #choice
-    jm_offering|"What are you selling today?..."
+    jm_offering|"Bending? What are you bending?..."
     jm_leave2|"I'll buy something next time, then..." [Leave]
 
 *jm_leave2
@@ -44,10 +44,10 @@
     jm_leave1|"Nope, sorry."
 
 *jm_offering
-#m Jim|jim.png|"Today I'm selling 1 Box of Nails for 2 Dollars, or 1 Box of Screws for 3 Dollars. I can also bend some Scrap Metal into two of both! What would you like to have? Oh, and keep in mind, I can only do this once a day. For... Buisness reasons."
+#m Jim|jim.png|"Today I'm bending 2x Unusable Metal into a Box of Nails, or 3x Unusable Metal into 2 Box of Screws. I can also bend some Scrap Metal into two of both! What would you like to have? Oh, and keep in mind, I'll do this once a day, as it's really exhausting..."
 #choice
-    jm_offer1|"A box of Nails, please." (Give 2 Dollars)
-    jm_offer2|"A box of Screws, please." (Give 3 Dollars)
+    jm_offer1|"A box of Nails, please." (Give 2 Unusable Metal)
+    jm_offer2|"A box of Screws, please." (Give 3 Unusable Metal)
     jm_offer3|"Can you bend me something?" (Give 4 Scrap Metal)
     jm_barb|"Hey, where's Barb?"
     jm_leave2|"Not right now" [Leave]
@@ -55,8 +55,8 @@
 *jm_offering_1
 #m Jim|jim.png|"You could choose the other one, maybe?"
 #choice
-    jm_offer1|"A box of Nails, please." (Give 2 Dollars)
-    jm_offer2|"A box of Screws, please." (Give 3 Dollars)
+    jm_offer1|"A box of Nails, please." (Give 2 Unusable Metal)
+    jm_offer2|"A box of Screws, please." (Give 3 Unusable Metal)
     jm_offer3|"Can you bend me something?" (Give 4 Scrap Metal)
     jm_barb|"Hey, where's Barb?"
     jm_leave2|"Not right now" [Leave]
@@ -66,7 +66,7 @@
 #is_quest jm_q1|locked
     #quest_unlock jm_q1
     #m Jim|jim.png|He smiles, saying "Great! Two dollars, please."
-    #has_item Base.Money,2
+    #has_item Base.UnusableMetal,2
         #m "There you go..."
         #jump jm_q1_found
     #task_unlock jm_q1|t2
@@ -77,7 +77,7 @@
     #has_item Base.Money,2
         *jm_q1_found
         #m You hand him the 2 Dollars...
-        #remove_item Base.Money,2
+        #remove_item Base.UnusableMetal,2
         #m Jim|jim.png|"Very well! Here, have that."
         #set_flag jm_q1_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
         #m He puts the money into the Register, and beginns to count through the Money...
@@ -93,7 +93,7 @@
 #is_quest jm_q2|locked
     #quest_unlock jm_q2
     #m Jim|jim.png|"Good! 3 Dollars, then!"
-    #has_item Base.Money,3
+    #has_item Base.UnusableMetal,3
         #m "There you have it..."
         #jump jm_q2_found
     #task_unlock jm_q2|t2
@@ -104,7 +104,7 @@
     #has_item Base.Money,3
         *jm_q2_found
         #m You hand him the 3 Dollars
-        #remove_item Base.Money,3
+        #remove_item Base.UnusableMetal,3
         #m Jim|jim.png|"Sweet! Here, have this Box."
         #set_flag jm_q2_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
         #m You see him look at something under the Table, before reading something off from the Register...

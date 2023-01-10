@@ -1,6 +1,6 @@
 #quest jm_q1|daily
     #task t1|unlocked
-        #set FindItem|Base.Money,2
+        #set FindItem|Base.UnusableMetal,2
     #task t2|unlocked|hidden
         #set TaskCondition|jm_q1|t1
         #action UnlockTask|jm_q1|t3
@@ -11,7 +11,7 @@
 
 #quest jm_q2|daily
     #task t1|unlocked
-        #set FindItem|Base.Money,3
+        #set FindItem|Base.UnusableMetal,3
     #task t2|unlocked|hidden
         #set TaskCondition|jm_q2|t1
         #action UnlockTask|jm_q2|t3
