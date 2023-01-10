@@ -7,7 +7,7 @@
     #line js_q1_completed|As soon as I gave Jessica the Chips bag, she sacked in on herself. I... I don't know why, but I had a feeling of relief. I'm not sure if she's alive, hell, if she was ever alive at all, but now she seems at peace. I hope atleast.
 
 #entry This weird fellow near the Consortium Trading outpost
-    #line cs_intro|Found Cletus behind the Consortiums Trading Outpost. Appearently he's trading Scrap Electronics for Cash... Might be useful in the future.
+    #line cs_intro|Found Cletus in the Russton Hotel, run by Ellis Stone. Appearently he's trading Scrap Electronics for Cash... Might be useful in the future.
 
 #entry Jim at Tiger Industries
     #line jm_intro|Jim is one of the many Cousins from Barb, and he's selling either Nails, Screws or bends metal into 2 of both. He could tell me where Barb is, too.
