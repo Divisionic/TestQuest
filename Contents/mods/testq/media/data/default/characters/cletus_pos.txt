@@ -1,1 +1,1 @@
-#npc_create Cletus|cletus_normal|duck|2367,2568,0|N
+#npc_create Cletus|cletus_normal|sit|1453,2491,2|N
