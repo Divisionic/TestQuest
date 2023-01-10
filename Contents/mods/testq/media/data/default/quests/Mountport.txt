@@ -3,56 +3,30 @@
         #set GotoLocation|1746,451,2139,927,0|true
         #action ApplyStat|Stress,100
         #action ApplyStat|Unhappiness,100
-        #action ApplyStat|Boredom,100
         #action ApplyStat|Panic,100
-        #action ApplyStat|Anger,100
+        #action ApplyStat|Hunger,60
         #action RunScript|mtp.txt,inside
-        #action UnlockTask|mount_q1|t2
+        #action UnlockTask|mount_q1|a2,a2_1,a2_2
     #task a2|locked|hidden
         #set GotoLocation|1788,1013,2204,1069,0|true
         #action ApplyStat|Stress,-100
         #action ApplyStat|Unhappiness,-100
-        #action ApplyStat|Boredom,-100
         #action ApplyStat|Panic,-100
-        #action ApplyStat|Anger,-100
+        #action ApplyStat|Hunger,-30
         #action RunScript|mtp.txt,outside
-
-#quest mount_q2|unlocked|hidden
-    #task b1|unlocked|hidden
-        #set GotoLocation|1746,451,2139,927,0|true
-        #action ApplyStat|Stress,100
-        #action ApplyStat|Unhappiness,100
-        #action ApplyStat|Boredom,100
-        #action ApplyStat|Panic,100
-        #action ApplyStat|Anger,100
-        #action RunScript|mtp.txt,inside
-        #action UnlockTask|mount_q2|b2
-    #task b2|locked|hidden
+    #task a2_1|locked|hidden
         #set GotoLocation|1699,412,1772,1199,0|true
         #action ApplyStat|Stress,-100
         #action ApplyStat|Unhappiness,-100
-        #action ApplyStat|Boredom,-100
         #action ApplyStat|Panic,-100
-        #action ApplyStat|Anger,-100
+        #action ApplyStat|Hunger,-30
         #action RunScript|mtp.txt,outside
-
-#quest mount_q3|unlocked|hidden
-    #task c1|unlocked|hidden
-        #set GotoLocation|1746,451,2139,927,0|true
-        #action ApplyStat|Stress,100
-        #action ApplyStat|Unhappiness,100
-        #action ApplyStat|Boredom,100
-        #action ApplyStat|Panic,100
-        #action ApplyStat|Anger,100
-        #action RunScript|mtp.txt,inside
-        #action UnlockTask|mount_q3|c2
-    #task c2|locked|hidden
+    #task a2_2|locked|hidden
         #set GotoLocation|2162,600,2199,991,0|true
         #action ApplyStat|Stress,-100
         #action ApplyStat|Unhappiness,-100
-        #action ApplyStat|Boredom,-100
         #action ApplyStat|Panic,-100
-        #action ApplyStat|Anger,-100
+        #action ApplyStat|Hunger,-30
         #action RunScript|mtp.txt,outside
 
 --1746,451,2139,927,0|true

@@ -11,3 +11,6 @@
 
 #entry Jim at Tiger Industries
     #line jm_intro|Jim is one of the many Cousins from Barb, and he's selling either Nails, Screws or bends metal into 2 of both. He could tell me where Barb is, too.
+
+#entry Mountport
+    #line mount_q1|There have been rumors around Mountport that it's been haunted appereantly. I should stay away from there...
