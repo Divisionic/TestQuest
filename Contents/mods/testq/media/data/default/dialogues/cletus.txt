@@ -45,6 +45,14 @@ set_flag trading,false
 #m Cletus|CletusNew.png|He notices you coming by and is puzzled, but realizes who you are: "Ah, you're back! Wanna trade some more?"
 #choice
     cs_offering|"Yup."
+    cs_question1|"I've got a Question: Where's Trader Scotchmoe?"
+    cs_leave1|"Nope, sorry."
+
+*cs_back1
+#m Cletus|CletusNew.png|"So, wanna trade some more?"
+#choice
+    cs_offering|"Yup."
+    cs_question1|"I've got a Question: Where's Trader Scotchmoe?"
     cs_leave1|"Nope, sorry."
 
 *cs_offering
@@ -66,6 +74,10 @@ set_flag trading,false
     cs_offer4|"Here, what do you think?" (Give 5 Doorknobs)
     cs_offer5|"Hinges. Want them?" (Give 5 Door Hinges)
     cs_leave2|"Not right now" [Leave]
+
+*cs_question1
+    #m Cletus|CletusNew.png|"If he isn't behind his counter, then he's probably sleeping or not here right now. Call the Boss via your Radio, he'll answer there!" ((@Crackhead Jeb in #public-radio))
+    #jump cs_back1
 
 *cs_offer1
 #set_flag offer1_accepted,true|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false|trading,true
