@@ -1,11 +1,19 @@
 *cs_q1
-#name 10x Scrap Electronic delivery 
+#name 5x Scrap Electronic delivery 
 #desc Promised Cletus 10 Scrap Electronics for some Money, I should bring it to him as soon as possible.
 
 *cs_q2
-#name 25x Scrap Electronic delivery
-#desc Promised Cletus 25 Scrap Electronics for a bit more Money, I really should hurry and bring it.
+#name 5x Scrap Scrap Metal delivery
+#desc Promised Cletus 5 Scrap Metal for a bit more Money, I really should hurry and bring it.
 
 *cs_q3
-#name 50x Scrap Electronic delivery
-#desc Promised Cletus 50 Scrap Electronics for Money, I'll have to deliver it...
+#name 5x Unusable Metal delivery
+#desc Promised Cletus 5 Unusable Metal for Money, I'll have to deliver it...
+
+*cs_q4
+#name 5x Doorknob delivery
+#desc Promised Cletus 5 Doorknobs for Money. Wonder what he'll do with 'em... I need to bring it by soon.
+
+*cs_q5
+#name 5x Door Hinge delivery
+#desc Promised Cletus 5 Door Hinges for Money, I hope he pays good when I deliver it.
