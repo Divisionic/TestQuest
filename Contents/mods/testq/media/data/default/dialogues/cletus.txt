@@ -50,17 +50,21 @@ set_flag trading,false
 *cs_offering
 #m Cletus|CletusNew.png|"Great Dude, how much ya got?"
 #choice
-    cs_offer1|"Here." (Give 10 Scrap Electronic)
-    cs_offer2|"Hope you got my Money man..." (Give 25 Scrap Electronics)|cs_q1_completed
-    cs_offer3|"Got a bunch right here!" (Give 50 Scrap Electronics)|cs_q2_completed
+    cs_offer1|"Here." (Give 5 Scrap Electronic)
+    cs_offer2|"Hope you got my Money man..." (Give 5 Scrap Metal)
+    cs_offer3|"Got a bunch right here!" (Give 5 Door Hinges)
+    cs_offer4|"PLACEHOLDER" (Give 5 Woodscrap)
+    cs_offer5|"PLACEHOLDER2" (Give 5 Unusable Metal)
     cs_leave2|"Not right now" [Leave]
 
 *cs_offering_1
 #m Cletus|CletusNew.png|"So, what else ya got?"
 #choice
-    cs_offer1|"Here." (Give 10 Scrap Electronic)
-    cs_offer2|"Hope you got my Money man..." (Give 25 Scrap Electronics)|cs_q1_completed
-    cs_offer3|"Got a bunch right here!" (Give 50 Scrap Electronics)|cs_q2_completed
+    cs_offer1|"Here." (Give 5 Scrap Electronic)
+    cs_offer2|"Hope you got my Money man..." (Give 5 Scrap Metal)
+    cs_offer3|"Got a bunch right here!" (Give 5 Door Hinges)
+    cs_offer4|"PLACEHOLDER" (Give 5 Woodscrap)
+    cs_offer5|"PLACEHOLDER2" (Give 5 Unusable Metal)
     cs_leave2|"Not right now" [Leave]
 
 *cs_offer1
