@@ -1,14 +1,24 @@
-*cs_q1_t1
-#name Find 10 Scrap Electronics
-*cs_q1_t3
-#name Bring them Electronics to Cletus
+*cs_q1_a1
+#name Find 5 Scrap 
+*cs_q1_a3
+#name Bring them to Cletus
 
-*cs_q2_t1
-#name Find 25 Scrap Electronics
-*cs_q2_t3
-#name Bring them Electronics to Cletus
+*cs_q2_b1
+#name Find 5 Scrap Metal
+*cs_q2_b3
+#name Bring them to Cletus
 
-*cs_q3_t1
-#name Find 50 Scrap Electronics
-*cs_q3_t3
-#name Bring them Electronics to Cletus
+*cs_q3_c1
+#name Find 5 UnusableMetal
+*cs_q3_c3
+#name Bring them to Cletus
+
+*cs_q4_d1
+#name Find 5 Doorknobs
+*cs_q4_d3
+#name Bring them to Cletus
+
+*cs_q4_e1
+#name Find 5 Door Hinges
+*cs_q4_e3
+#name Bring them to Cletus
