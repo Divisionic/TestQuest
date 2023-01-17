@@ -1,32 +1,16 @@
 #quest mount_q1|unlocked|hidden
     #task a1|unlocked|hidden
         #set GotoLocation|1746,451,2139,927,0|true
-        #action ApplyStat|Stress,100
-        #action ApplyStat|Unhappiness,100
-        #action ApplyStat|Panic,100
-        #action ApplyStat|Hunger,30
         #action RunScript|mtp.txt,inside
         #action UnlockTask|mount_q1|a2,a2_1,a2_2
     #task a2|locked|hidden
         #set GotoLocation|1788,1013,2204,1069,0|true
-        #action ApplyStat|Stress,-100
-        #action ApplyStat|Unhappiness,-100
-        #action ApplyStat|Panic,-100
-        #action ApplyStat|Hunger,-20
         #action RunScript|mtp.txt,outside
     #task a2_1|locked|hidden
         #set GotoLocation|1699,412,1772,1199,0|true
-        #action ApplyStat|Stress,-100
-        #action ApplyStat|Unhappiness,-100
-        #action ApplyStat|Panic,-100
-        #action ApplyStat|Hunger,-20
         #action RunScript|mtp.txt,outside
     #task a2_2|locked|hidden
         #set GotoLocation|2162,600,2199,991,0|true
-        #action ApplyStat|Stress,-100
-        #action ApplyStat|Unhappiness,-100
-        #action ApplyStat|Panic,-100
-        #action ApplyStat|Hunger,-20
         #action RunScript|mtp.txt,outside
 
 --1746,451,2139,927,0|true
