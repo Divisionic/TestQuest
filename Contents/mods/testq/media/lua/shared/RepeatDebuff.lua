@@ -41,4 +41,4 @@ end
 
 
 Events.OnQSystemUpdate.Add(RepeatDebuff.onQSystemUpdate);
-Events.EveryOneMinute.Add(RepeatDebuff.restore);
+Events.OnTick.Add(RepeatDebuff.restore);
