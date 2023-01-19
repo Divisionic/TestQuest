@@ -11,11 +11,13 @@ function RepeatDebuff.onQSystemUpdate(code)
         if player then
             if CharacterManager.instance then
                 if CharacterManager.instance:isFlag("in_mountport") then
-                        getPlayer():getStats():setPanic(100);
-                        activemoodlet = true;
+                        getPlayer():getStats():setPanic(100)
+                        getPlayer():getBodyDamage():setUnhappynessLevel(100)
+                        activemoodlet = true
                 else
-                        getPlayer():getStats():setPanic(25)
-                        activemoodlet = false;
+                    getPlayer():getStats():setPanic(25)
+                    getPlayer():getBodyDamage():setUnhappynessLevel(25)
+                    activemoodlet = false
                 end
             end
         end
@@ -29,10 +31,12 @@ function RepeatDebuff.restore()
             if CharacterManager.instance then
                 if CharacterManager.instance:isFlag("in_mountport") then
                         getPlayer():getStats():setPanic(100)
-                        activemoodlet = true;
+                        getPlayer():getBodyDamage():setUnhappynessLevel(100)
+                        activemoodlet = true
                 else
-                    getPlayer:getStats():setPanic(25);
-                    activemoodlet = false;
+                    getPlayer():getStats():setPanic(25)
+                    getPlayer():getBodyDamage():setUnhappynessLevel(25)
+                    activemoodlet = false
                 end
             end
         end
