@@ -1,3 +1,6 @@
+#is_task mount_q1|a1|unlocked,uncompleted
+    #set_flag out_mountport,false
+
 *inside
 #set_flag in_mountport,true|out_mountport,false
 #m You get a bad feeling being in Mountport... You should get out of here.
