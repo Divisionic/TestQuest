@@ -1,14 +1,14 @@
 #is_task mount_q1|a1|unlocked,uncompleted
-    #set_flag out_mountport,false
+    #set_flag in_mountport,false
 
 *inside
 #set_flag in_mountport,true|out_mountport,false
-#m You get a bad feeling being in Mountport... You should get out of here.
+#m You have a strange feeling being in Mountport... You should get out of here.
 #exit
 
 *outside
 #set_flag in_mountport,false|out_mountport,true
-#m Don't come back.
+#m "I shouldn't come back..."
 #quest_reset mount_q1
 #exit
 
