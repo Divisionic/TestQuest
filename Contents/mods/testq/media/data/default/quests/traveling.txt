@@ -1,0 +1,7 @@
+#quest tp_around|unlocked|hidden
+    #task tp_south_east|unlocked|hidden
+        #set ContextAction|Request Pickup|2948,2555,0
+        #action RunScript|sos.txt,testTP1
+    #task tp_sos_base|unlocked|hidden
+        #set ContextAction|Return to Clear Cove|4267,705,0
+        #action RunScript|sos.txt,testTP2

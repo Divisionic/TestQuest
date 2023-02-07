@@ -1,4 +1,0 @@
-#quest tp_sos|unlocked|hidden
-    #task tp_south_east|unlocked|hidden
-        #set ContextAction|Request Pickup|2948,2555,0
-        #action RunScript|script.txt

@@ -1,0 +1,49 @@
+--Check this guy out: https://steamcommunity.com/id/notboots/
+--most based guy ever, thank you for sharing the code!!!!
+
+---
+
+*
+
+---
+
+*testTP1
+    #script sos.txt|sos_safety
+    #teleport 4267,707,0
+    #script sos.txt|sos_end
+
+*sos_safety
+    #fade_out black|0.5|false
+    #cutscene true
+    #ret
+
+*sos_end
+    #quest_reset tp_around
+    #wait 2
+    #fade_in 0.5
+    #cutscene false
+    #m Skip|Divisionic.png|This is a Test Box.
+    #exit
+
+---
+
+*testTP2
+    #script sos.txt|cc_safety
+    #teleport 2947,2555,0
+    #script sos.txt|cc_end
+
+*cc_safety
+    #fade_out black|0.5|false
+    #cutscene true
+    #ret
+
+*cc_end
+    #quest_reset tp_around
+    #wait 2
+    #fade_in 0.5
+    #cutscene false
+    #m Skip|Divisionic.png|This is another Test Box.
+    #exit
+
+---
+
