@@ -8,9 +8,9 @@
 ---
 
 *testTP1
-    #script sos.txt|sos_safety
+    #script travel.txt|sos_safety
     #teleport 4267,707,0
-    #script sos.txt|sos_end
+    #script travel.txt|sos_end
 
 *sos_safety
     #fade_out black|0.5|false
@@ -25,12 +25,12 @@
     #m Skip|Divisionic.png|This is a Test Box.
     #exit
 
----
+-
 
 *testTP2
-    #script sos.txt|cc_safety
+    #script travel.txt|cc_safety
     #teleport 2947,2555,0
-    #script sos.txt|cc_end
+    #script travel.txt|cc_end
 
 *cc_safety
     #fade_out black|0.5|false
