@@ -44,7 +44,7 @@
     jm_leave1|"Nope, sorry."
 
 *jm_offering
-#m Jim|jim.png|"Today I'm bending 2x Unusable Metal into a Box of Nails, or 3x Unusable Metal into 2 Box of Screws. I can also bend some Scrap Metal into two of both! What would you like to have? Oh, and keep in mind, I'll do this once a day, as it's really exhausting..."
+#m Jim|jim.png|"Today I'm bending 2x Unusable Metal into a Box of Nails, or 3x Unusable Metal into a Box of Screws. I can also bend some Scrap Metal into two of both! What would you like to have? Oh, and keep in mind, I'll do this once a day, as it's really exhausting..."
 #choice
     jm_offer1|"A box of Nails, please." (Give 2 Unusable Metal)
     jm_offer2|"A box of Screws, please." (Give 3 Unusable Metal)
@@ -65,7 +65,7 @@
 #set_flag offer1_accepted,true|offer2_accepted,false|offer3_accepted,false|trading,true
 #is_quest jm_q1|locked
     #quest_unlock jm_q1
-    #m Jim|jim.png|He smiles, saying "Great! Two dollars, please."
+    #m Jim|jim.png|He smiles, saying "Great! Where's the Metal?"
     #has_item Base.UnusableMetal,2
         #m "There you go..."
         #jump jm_q1_found
@@ -73,14 +73,14 @@
     #m Jim|jim.png|"Oh, you don't have the Metal? Hm... You know what, come back when you have it. Until then, no other bending. Sorry."
     #exit
 #is_quest jm_q1|unlocked,uncompleted
-    #m Jim|jim.png|He notices you and asks "Oh, do you have the Money?"
-    #has_item Base.Money,2
+    #m Jim|jim.png|He notices you and asks "Oh, do you have the Metal?"
+    #has_item Base.UnusableMetal,2
         *jm_q1_found
         #m You hand him the 2 pieces of Unusable Metal...
         #remove_item Base.UnusableMetal,2
         #m Jim|jim.png|"Very well! Here, have that."
         #set_flag jm_q1_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
-        #m He puts the money into the Register, and beginns to count through the Money...
+        #m He cleans his fingers, and beginns to count the Money again...
         #exit
     #m "Not yet."
     #exit
@@ -100,14 +100,14 @@
     #m Jim|jim.png|"No Metal? No problem, come back later and bring it to me. Until then, no other bending. Sorry."
     #exit
 #is_quest jm_q2|unlocked,uncompleted
-    #m Jim|jim.png|He notices you and asks "Ah, did you bring the Money?"
-    #has_item Base.Money,3
+    #m Jim|jim.png|He notices you and asks "Ah, did you bring the Metal?"
+    #has_item Base.UnusableMetal,3
         *jm_q2_found
         #m You hand him the 3 pieces of Unusable Metal
         #remove_item Base.UnusableMetal,3
         #m Jim|jim.png|"Sweet! Here, have this Box."
         #set_flag jm_q2_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|trading,true
-        #m You see him look at something under the Table, before reading something off from the Register...
+        #m You see him look at something under the Table, and then continuing to reading something off from the Register...
         #exit
     #m "Not yet, soon though."
     #exit
@@ -145,7 +145,7 @@
 *q_complete
 #is_flag jm_q1_completed,true|jm_q2_completed,true|jm_q3_completed,true|trading,true
     #jump finish
-#m Jim|jim.png|"Hm... Sorry, I think I can't sell anymore. I have to keep some for Barb after all. Come back tomorrow when we have more, ok?"
+#m Jim|jim.png|"Hm... Sorry, I don't think I can do much more. I have to keep some of my strength for Barb after all. Come back tomorrow for more, ok?"
     #jump jm_offering_1
 #exit
 
@@ -158,12 +158,12 @@
     #exit
 
 *finish
-#m Jim|jim.png|"Yeah, I- Oh. I'm blank. Hm. Could you come back tomorrow? I can give you more tomorrow!" 
+#m Jim|jim.png|"Oh, uhm... I'm sorry, but today I'm really not able to do it today, the fingers hurt. Could you come back tomorrow? I can make you more tomorrow!" 
 #choice
     jm_barb1|"Before I go, where is Barb?"
     jm_leave2|[Leave]
 #exit
 
 *place_holder
-#m Divisionic|Divisionic.png|Hello, it's me, Divisionic! If you can read this, that means you completed all the Quests! Congrats! This NPC should be updated now, come again tomorrow and check if you can repeat the Quest!
+#m Divisionic|Divisionic.png|Hello, it's me, Divisionic! If you can read this, that means you broke something. No worries, just remember what you did, make a Ticket and @ZeeGasmaske#9494
 #exit
