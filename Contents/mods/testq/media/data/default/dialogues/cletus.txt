@@ -99,12 +99,14 @@ set_flag trading,false
         #m Cletus|CletusNew.png|"Haha, hell yeah! Here, take that!"
         #set_flag cs_q1_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false|trading,true
         #m You see his eyes shining through the glasses, and he continues to look in the Journal to scribble for more...
+        #quest_reset cs_q1
         #exit
     #m "Not yet, soon though."
     #exit
 #is_flag cs_q1_completed,true|trading,true
-    #jump q_complete
-    #exit
+    #set_flag cs_q1_completed,false|offer1_accepted,true|trading,true
+    #quest_reset cs_q1
+    #jump cs_offer1
 
 *cs_offer2
 #set_flag offer1_accepted,false|offer2_accepted,true|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false|trading,true
@@ -126,12 +128,14 @@ set_flag trading,false
         #m Cletus|CletusNew.png|"HE-HEY! Here, take that! DESERVED!"
         #set_flag cs_q2_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false|trading,true
         #m You see his eyes shining through the glasses, and he continues to look in the Journal to scribble for more...
+        #quest_reset cs_q2
         #exit
     #m "Not yet, soon though."
     #exit
 #is_flag cs_q2_completed,true|trading,true
-    #jump q_complete
-    #exit
+    #set_flag cs_q2_completed,false|offer2_accepted,true|trading,true
+    #quest_reset cs_q2
+    #jump cs_offer2
 
 *cs_offer3
 #set_flag offer1_accepted,false|offer2_accepted,false|offer3_accepted,true|offer4_accepted,false|offer5_accepted,false|trading,true
@@ -153,15 +157,17 @@ set_flag trading,false
         #m Cletus|CletusNew.png|"HOLY SHIT YOU ACTUALLY HAVE IT! Here, take this!"
         #set_flag cs_q3_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false|trading,true
         #m You see his eyes shining through the glasses, and he continues to look in the Journal to scribble for more...
+        #quest_reset cs_q3
         #exit
     #m "Not yet, soon though."
     #exit
 #is_flag cs_q3_completed,true|trading,true
-    #jump q_complete
-    #exit
+    #set_flag cs_q3_completed,false|offer3_accepted,true|trading,true
+    #quest_reset cs_q3
+    #jump cs_offer3
 
 *cs_offer4
-#set_flag offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,true|offer5_accepted,false|trading,true
+#set_flag offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,true_completed,true|offer5_accepted,false|trading,true
 #is_quest cs_q4|locked
     #quest_unlock cs_q4
     #m Cletus|CletusNew.png|He whistles, saying "OI OI! WHERE- I mean, where are the goodies..."
@@ -180,39 +186,42 @@ set_flag trading,false
         #m Cletus|CletusNew.png|"OH sweet Momma! Here, take this!"
         #set_flag cs_q4_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false|trading,true
         #m You see his eyes shining through the glasses, and he continues to look in the Journal to scribble for more...
+        #quest_reset cs_q4
         #exit
     #m "Not yet, soon though."
     #exit
 #is_flag cs_q4_completed,true|trading,true
-    #jump q_complete
-    #exit
+    #set_flag cs_q4_completed,false|offer4_accepted,true|trading,true
+    #quest_reset cs_q4
+    #jump cs_offer4
     
 *cs_offer5
 #set_flag offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,true|trading,true
-#is_quest cs_q5|locked
-    #quest_unlock cs_q5
+#is_quest cs_q3|locked
+    #quest_unlock cs_q3
     #m Cletus|CletusNew.png|"I WANT IT, WHERE- I mean, where are the goodies..."
     #has_item Base.Hinge,5
         #m "There you you have it..."
-        #jump cs_q5_found
-    #task_unlock cs_q5|e2
+        #jump cs_q3_found
+    #task_unlock cs_q3|e2
     #m Cletus|CletusNew.png|OH C'MON! Get me some Hinges will you?! No Trading till then, that's MY promise!
     #exit
-#is_quest cs_q5|unlocked,uncompleted
+#is_quest cs_q3|unlocked,uncompleted
     #m Cletus|CletusNew.png|He notices you and asks immeaditly "You got it? 5 Hinges?"
     #has_item Base.Hinge,5
-        *cs_q5_found
+        *cs_q3_found
         #m You hand him the 5 Hinges
         #remove_item Base.Hinge,5
         #m Cletus|CletusNew.png|"SWEEEEET, take this!"
-        #set_flag cs_q5_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false|trading,true
+        #set_flag cs_q3_completed,true|offer1_accepted,false|offer2_accepted,false|offer3_accepted,false|offer4_accepted,false|offer5_accepted,false|trading,true
         #m You see his eyes shining through the glasses, and he continues to look in the Journal to scribble for more...
         #exit
     #m "Not yet, soon though."
     #exit
-#is_flag cs_q5_completed,true|trading,true
-    #jump q_complete
-    #exit
+#is_flag cs_q3_completed,true|trading,true
+    #set_flag cs_q3_completed,false|offer5_accepted,true|trading,true
+    #quest_reset cs_q3
+    #jump cs_offer5
 
 *q_complete
 #is_flag cs_q1_completed,true|cs_q2_completed,true|cs_q3_completed,true|cs_q4_completed,true|cs_q5_completed,true|trading,true
@@ -226,5 +235,5 @@ set_flag trading,false
 #exit
 
 *place_holder
-#m Divisionic|Divisionic.jpg|Hello, it's me, Divisionic! If you can read this, that means you completed all the Quests! Congrats! But this also means something broke, and you should probably Ping me in the BLRP discord.
+#m Divisionic|Divisionic.jpg|Hello, it's me, Divisionic! If you can read this, that means you completed all the Quests! Congrats! Or this also means something broke, and you should make a ticket, remember what you did, and ping @Zee Gasmaske#9494.
 #exit

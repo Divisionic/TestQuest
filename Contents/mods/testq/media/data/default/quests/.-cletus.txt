@@ -5,10 +5,7 @@
         #set TaskCondition|cs_q1|a1
         #action UnlockTask|cs_q1|a3
     #task a3
-        #set Deliver|Base.ElectronicsScrap,5
-        #set RaiseFlag|cs_q1_completed
         #action Reward|Base.Money,5,common
-        #action CompleteQuest|cs_q1
 
 #quest cs_q2
     #task b1|unlocked
@@ -17,10 +14,7 @@
         #set TaskCondition|cs_q2|b1
         #action UnlockTask|cs_q2|b3
     #task b3
-        #set Deliver|Base.ScrapMetal,5
-        #set RaiseFlag|cs_q2_completed
         #action Reward|Base.Money,5,common
-        #action CompleteQuest|cs_q2
 
 #quest cs_q3
     #task c1|unlocked
@@ -29,10 +23,7 @@
         #set TaskCondition|cs_q3|c1
         #action UnlockTask|cs_q3|c3
     #task c3
-        #set Deliver|Base.UnusableMetal,5
-        #set RaiseFlag|cs_q3_completed
         #action Reward|Base.Money,5,common
-        #action CompleteQuest|cs_q3
 
 #quest cs_q4
     #task d1|unlocked
@@ -41,10 +32,7 @@
         #set TaskCondition|cs_q4|d1
         #action UnlockTask|cs_q4|d3
     #task d3
-        #set Deliver|Base.Doorknob,5
-        #set RaiseFlag|cs_q4_completed
         #action Reward|Base.Money,10,common
-        #action CompleteQuest|cs_q4
 
 #quest cs_q5
     #task e1|unlocked
@@ -53,7 +41,4 @@
         #set TaskCondition|cs_q5|e1
         #action UnlockTask|cs_q5|e3
     #task e3
-        #set Deliver|Base.Hinge,5
-        #set RaiseFlag|cs_q5_completed
         #action Reward|Base.Money,10,common
-        #action CompleteQuest|cs_q5
